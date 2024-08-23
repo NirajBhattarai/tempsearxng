@@ -1,0 +1,17 @@
+# see https://docs.searxng.org/admin/settings/settings.html#settings-use-default-settings
+use_default_settings: true
+server:
+  # # base_url is defined in the SEARXNG_BASE_URL environment variable, see .env and docker-compose.yml
+  # secret_key: "cf9c14e2d013e5b22948aa5144ef8edc458daa1079a1566da38be1404e35cb71"  # change this!
+  limiter: false  # can be disabled for a private instance
+  # image_proxy: true
+general:
+  debug: true
+search:
+  formats:
+    - html
+    - json  
+ui:
+  static_use_hash: true
+redis:
+  url: redis://redis:6379/0
